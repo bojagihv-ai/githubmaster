@@ -1,0 +1,28 @@
+{
+  "defaults": {
+    "poll_interval_minutes": 720,
+    "timeout_seconds": 20,
+    "max_retries": 2,
+    "user_agent": "AI-Savings-Tracker/0.1 (+local-use)"
+  },
+  "sources": [
+    {
+      "provider": "openai",
+      "enabled": true,
+      "kind": "openai",
+      "url": "https://openai.com/pricing",
+      "poll_interval_minutes": 720,
+      "legal_note": "공식 가격/프로모션 페이지만 수집",
+      "region": "global"
+    },
+    {
+      "provider": "google_gemini",
+      "enabled": true,
+      "kind": "gemini",
+      "url": "https://gemini.google.com/advanced",
+      "poll_interval_minutes": 720,
+      "legal_note": "공식 Gemini 안내 페이지만 수집",
+      "region": "global"
+    }
+  ]
+}
